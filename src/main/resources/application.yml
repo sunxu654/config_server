@@ -1,6 +1,12 @@
 spring:
   application:
     name: config-server
+      #增加消息队列的访问地址
+  rabbitmq:
+    host: 192.168.245.4
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
@@ -10,7 +16,8 @@ spring:
           password: q1q1q1
 
 server:
-  port: 9100
+   port: 9100
+
 eureka:
   client:
     service-url:
